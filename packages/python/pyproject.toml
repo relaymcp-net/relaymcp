@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "relaymcp-client"
+version = "0.1.0"
+description = "Official, dependency-free Python client for RelayMCP inboxes, messages, OTPs, webhooks, and events."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "RelayMCP", email = "admin@relaymcp.net" }]
+keywords = ["email-testing", "email-inbox", "temporary-email", "otp", "magic-link", "webhooks", "relaymcp"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Internet :: WWW/HTTP",
+  "Topic :: Software Development :: Testing",
+]
+
+[project.urls]
+Homepage = "https://www.relaymcp.net"
+Documentation = "https://www.relaymcp.net/docs"
+Repository = "https://github.com/relaymcp-net/relaymcp"
+Issues = "https://github.com/relaymcp-net/relaymcp/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/relaymcp"]

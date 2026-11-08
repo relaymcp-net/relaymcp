@@ -1,0 +1,23 @@
+{
+  "name": "@relaymcp/cli",
+  "version": "0.1.2",
+  "description": "Official RelayMCP command-line client for inbox automation, message inspection, OTP extraction, and webhooks.",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/relaymcp/relaymcp.net.git",
+    "directory": "packages/cli"
+  },
+  "homepage": "https://www.relaymcp.net/docs",
+  "bugs": { "url": "https://github.com/relaymcp/relaymcp.net/issues" },
+  "keywords": ["email-testing", "email-inbox", "temporary-email", "otp", "magic-link", "webhooks", "cli", "relaymcp"],
+  "files": ["bin", "README.md", "LICENSE", "CHANGELOG.md"],
+  "bin": { "relay": "bin/relay.mjs" },
+  "scripts": {
+    "prepack": "node --check bin/relay.mjs"
+  },
+  "dependencies": { "@relaymcp/sdk": "^0.1.1" },
+  "engines": { "node": ">=18" },
+  "publishConfig": { "access": "public" }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "@relaymcp/sdk",
+  "version": "0.1.1",
+  "description": "Official, dependency-free TypeScript client for RelayMCP inboxes, messages, OTPs, webhooks, and events.",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/relaymcp/relaymcp.net.git",
+    "directory": "packages/sdk"
+  },
+  "homepage": "https://www.relaymcp.net/docs",
+  "bugs": {
+    "url": "https://github.com/relaymcp/relaymcp.net/issues"
+  },
+  "keywords": ["email-testing", "email-inbox", "temporary-email", "otp", "magic-link", "webhooks", "sse", "mcp", "relaymcp"],
+  "files": ["dist", "README.md", "LICENSE", "CHANGELOG.md"],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test test/client.test.mjs",
+    "clean": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true})\"",
+    "prepack": "npm run clean && npm run build"
+  },
+  "publishConfig": { "access": "public" }
+}
